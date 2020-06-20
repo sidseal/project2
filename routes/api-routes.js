@@ -11,9 +11,9 @@ module.exports = function(app) {
     // Sending back a password, even a hashed password, isn't a good idea
     // console.log(req.Exercises)
     db.Exercises.create({
-      name: "benchPress",
-      category: "Chest",
-      instructions: "JustDoIt"
+      name: req.name,
+      category: req.category,
+      instructions: req.instructions
     }).then(dbExercise => {
       res.json(dbExercise);
     });
