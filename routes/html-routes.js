@@ -3,6 +3,7 @@
 
 // Requiring our custom middleware for checking if a user is logged in
 // const isAuthenticated = require("../config/middleware/isAuthenticated");
+var db = require("../models");
 
 module.exports = function(app) {
   app.get("/", (req, res) => {
@@ -10,8 +11,17 @@ module.exports = function(app) {
     // if (req.user) {
     //   res.redirect("/members");
     // }
+    db.Exercises.findAll({}).then(function(results) {
+      // results are available to us inside the .then
+      res.json(results);
 
-    res.render("index");
+      // db.Exercises.findAll(function(data) {
+      //   let obj = {
+      //     exercises: data
+      //   };
+      //   console.log(obj);
+      //   res.render("index", obj);
+    });
   });
 
   //   app.get("/login", (req, res) => {
