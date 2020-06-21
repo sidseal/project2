@@ -37,5 +37,12 @@ db.sequelize.sync({ force: true }).then(() => {
       PORT,
       PORT
     );
+    db.Exercises.create({
+      name: "ex1",
+      category: "arms",
+      instructions: "use your arms"
+    }).then(dbExercise => {
+      console.log(dbExercise);
+    });
   });
-});
+})
