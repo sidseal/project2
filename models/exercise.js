@@ -12,13 +12,15 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
     createdAt: {
-      field: "created_at",
-      type: Sequelize.DATE,
+      type: DataTypes.DATE,
+      // field: "created_at",
+      // type: sequelize.DATE,
       allowNull: false
     },
     updatedAt: {
-      field: "updated_at",
-      type: Sequelize.DATE,
+      type: DataTypes.DATE,
+      // field: "updated_at",
+      // type: sequelize.DATE,
       allowNull: false
     }
   });
