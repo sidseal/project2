@@ -3,7 +3,7 @@
 
 // Requiring our custom middleware for checking if a user is logged in
 // const isAuthenticated = require("../config/middleware/isAuthenticated");
-var db = require("../models");
+const db = require("../models");
 
 module.exports = function(app) {
   app.get("/", (req, res) => {
@@ -11,30 +11,20 @@ module.exports = function(app) {
     // if (req.user) {
     //   res.redirect("/members");
     // }
-    db.Exercises.findAll({}).then(function(results) {
+    db.Exercises.findAll({}).then(results => {
       // results are available to us inside the .then
-      res.json(results);
-
-      // db.Exercises.findAll(function(data) {
-      //   let obj = {
-      //     exercises: data
-      //   };
-      //   console.log(obj);
-      //   res.render("index", obj);
+      const obj = {
+        exercises: results
+      };
+      console.log(obj);
+      res.render("index", obj);
     });
   });
 
-  //   app.get("/login", (req, res) => {
-  //     // If the user already has an account send them to the members page
-  //     if (req.user) {
-  //       res.redirect("/members");
-  //     }
-  //     res.sendFile(path.join(__dirname, "../public/login.html"));
+  // app.post("/api/exercise", (req, res) => {
+  //   Exercises.create(["name"], [req.body.name], result => {
+  //     // Send back the ID of the new quote
+  //     res.json({ id: result.insertId });
   //   });
-
-  //   // Here we've add our isAuthenticated middleware to this route.
-  //   // If a user who is not logged in tries to access this route they will be redirected to the signup page
-  //   app.get("/members", isAuthenticated, (req, res) => {
-  //     res.sendFile(path.join(__dirname, "../public/members.html"));
-  //   });
+  // });
 };
