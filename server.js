@@ -33,9 +33,47 @@ require("./routes/html-routes.js")(app);
 db.sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => {
     console.log(
-      "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
+      "==> :earth_americas:  Listening on port %s. Visit http://localhost:%s/ in your browser.",
       PORT,
       PORT
     );
+    db.Exercises.bulkCreate([{
+      name: "Dips",
+      category: "Arms",
+      instructions: ""
+    },
+    {
+      name: "Aquaman",
+      category: "Back",
+      instructions: ""
+    },
+    {
+      name: "Diamond press-up",
+      category: "Chest",
+      instructions: ""
+    },
+    {
+      name: "Lunges",
+      category: "Legs",
+      instructions: ""
+    },
+    {
+      name: "Jumping Jacks",
+      category: "Cardio",
+      instructions: ""
+    },
+    {
+      name: "Sit-ups",
+      category: "Abs",
+      instructions: ""
+    },
+    {
+      name: "Crunches",
+      category: "Abs",
+      instructions: ""
+    },
+    ]).then(dbExercise => {
+      console.log(dbExercise);
+    });
   });
 });

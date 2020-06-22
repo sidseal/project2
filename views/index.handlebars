@@ -2,8 +2,11 @@
 
 <h2>workouts that have been done!</h2>
 
-<ul>
-  {{#each exercises}}
-    <li > {{name}} </li>
+{{#each exercises}}
+    <li > 
+      <p>{{dataValues.name}}</p>
+      <p>{{dataValues.category}}</p>
+      <p>{{dataValues.instructions}}</p>
+    </li>
   {{/each}}
-</ul>
+  
