@@ -29,6 +29,7 @@ db.sequelize.sync({ force: true }).then(() => {
       PORT,
       PORT
     );
+
     WeekDays();
     workouts();
   });

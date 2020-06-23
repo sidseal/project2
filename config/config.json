@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "Smoke&Swimw/Dolphins2",
-    "database": "workout_db",
-    "host": "127.0.0.1",
+    "username": "v0a0d6zgb4gp151c",
+    "password": "nclxxpib7k6r2k0x",
+    "database": "nrcyevup15yyhi7u",
+    "host": "qzkp8ry756433yd4.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
