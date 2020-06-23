@@ -1,5 +1,4 @@
-//Html Routes
-//Importing models created
+
 const db = require("../models");
 
 module.exports = function(app) {
