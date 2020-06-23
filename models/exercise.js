@@ -24,5 +24,14 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     }
   });
+  // Association
+  // Exercises.associate = function(models) {
+  //   Exercises.belongsTo(models.Week, {
+  //     foreignKey: {
+  //       allowNull: false
+  //     }
+  //   });
+  // };
+
   return Exercises;
 };
