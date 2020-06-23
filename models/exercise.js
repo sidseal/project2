@@ -1,7 +1,8 @@
 module.exports = function(sequelize, DataTypes) {
   const Exercises = sequelize.define("Exercises", {
     name: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
+      allowNull: false
     },
     category: {
       type: DataTypes.STRING,
@@ -13,13 +14,9 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
   // Association
-  // Exercises.associate = function(models) {
-  //   Exercises.belongsTo(models.Week, {
-  //     foreignKey: {
-  //       allowNull: false
-  //     }
-  //   });
-  // };
+  Exercises.associate = function(models) {
+    Exercises.belongsTo(models.Week);
+  };
 
   return Exercises;
 };

@@ -102,4 +102,4 @@ function workouts() {
   ]).then(dbExercise => {
     console.log(dbExercise);
   });
-};
+}
