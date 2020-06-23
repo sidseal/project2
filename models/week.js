@@ -7,13 +7,13 @@ module.exports = function(sequelize, DataTypes) {
   });
 
   // Association
-//   Week.associate = function(models) {
-//     Week.hasMany(models.Exercises, {
-//       foreignKey: {
-//         allowNull: false
-//       }
-//     });
-//   };
+  Week.associate = function(models) {
+    Week.hasMany(models.Exercises, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
 
   return Week;
 };
