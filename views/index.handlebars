@@ -3,36 +3,40 @@
     <div>
      {{#each days}}
     <div>
-      <div class="row" class="card-body" id={{days}}>
-        <div class="card" style="width: 18rem;">
+      <div class="row" class="card-body" id={{this}}>
+        <div class="card" id="cardMarg">
           <div>
-            <li> 
+            <p id="instruction">Please Choose Your Exercise</p>
+            <ul> 
                 {{!-- <p>{{dataValues.category}}</p>
                 <p>{{dataValues.name}}</p> --}}
-                <p>Please Choose Your Exercise</p>
+                
                 {{!-- <i data-id="{{this.id}}" class="fas fa-trash"></i> --}}
-            </li>
+            </ul>
           </div>
         
           <!-- Default dropup button -->
-          <div class="btn-group dropup">
-            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Focus On
-            </button>
-              <div class="dropdown-menu">
+          {{!-- <div class="btn-group dropup"> --}}
+            {{!-- <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              With This Workout
+            </button> --}}
+            
+              <select class="dropdown-menu">
                 <!-- Dropdown menu links -->
-                <a class="dropup-item" href="#">Arms</a>
-                <a class="dropup-item" href="#">Back</a>
-                <a class="dropup-item" href="#">Chest</a>
-                <a class="dropup-item" href="#">Legs</a>
-                <a class="dropup-item" href="#">Cardio</a>
-                <a class="dropup-item" href="#">Abs</a>
-              </div>
+                <option value=" " disabled selected>Focus On</option>
+                <option value="arms">Arms</option>
+                <option value="back">Back</option>
+                <option value="chest" >Chest</option>
+                <option value="legs">Legs</option>
+                <option value="cardio">Cardio</option>
+                <option value="abs">Abs</option>
+              {{!-- </div> --}}
             <input name="exerciseName"type="name" class="form-control" id="inputName" placeholder="Your Exercise">
             <i data-id ="{{id}}" data-exercise="true" class="fas fa-heartbeat"></i>
+            <p class="message"></p>
           </div>          
         </div>
-      </div>
+      {{!-- </div> --}}
     </div>
       {{/each}}
     </div>

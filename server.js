@@ -71,7 +71,5 @@ function workouts() {
       category: "Abs",
       instructions: ""
     }
-  ]).then(dbExercise => {
-    console.log(dbExercise);
-  });
+  ]);
 }
