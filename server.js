@@ -30,38 +30,9 @@ db.sequelize.sync({ force: true }).then(() => {
       PORT
     );
 
-    WeekDays();
     workouts();
   });
 });
-
-function WeekDays() {
-  db.Week.bulkCreate([
-    {
-      weekDay: "Sun"
-    },
-    {
-      weekDay: "Mon"
-    },
-    {
-      weekDay: "Tues"
-    },
-    {
-      weekDay: "Wed"
-    },
-    {
-      weekDay: "Thurs"
-    },
-    {
-      weekDay: "Fri"
-    },
-    {
-      weekDay: "Sat"
-    }
-  ]).then(dbExercise => {
-    console.log(dbExercise);
-  });
-}
 
 function workouts() {
   db.Exercises.bulkCreate([

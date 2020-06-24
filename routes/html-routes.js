@@ -1,16 +1,14 @@
-
 const db = require("../models");
 
 module.exports = function(app) {
-  //renders Home page
   app.get("/", (req, res) => {
     db.Exercises.findAll({}).then(results => {
+      // results are available to us inside the .then
       const obj = {
         exercises: results
       };
-      // console.log(obj);
+      console.log(obj);
       res.render("index", obj);
     });
   });
-
 };
