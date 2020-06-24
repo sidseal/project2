@@ -11,22 +11,33 @@ body, html {
  }
 
 .card {
-    border-radius: 20%;
-    border-style: groove;
+    display: initial;
+    padding: 2%;
+    background-color: floralwhite;
+    border-radius: 10%;
+    border-style: solid;
+    border-width: thick;
+}
+
+.row {
+    margin: 5%;
+    float: left;
 }
 
 i {
+    margin-right: 5%;
     cursor: pointer;
 }
 
-.carousel-item {
+/* .carousel-item {
     width: 70%;
     margin: auto;
     max-height: 750px;
-}
+} */
 
 li {
-    margin: 20%;
+    display: inline-flex;
+    margin: 10%;
 }
 
 #deleteBTN {

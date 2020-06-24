@@ -1,36 +1,38 @@
 {{!-- Main Content --}}
 <div class="container-fluid" id="center-all-content">
-  <h1>workouts!</h1>
-
-  <h2>workouts that have been done!</h2>
-
-
-  {{!-- 7 Day Workout Forecast --}}
-  
-
-
     <div>
      {{#each exercises}}
     <div>
-
-      
-     <div class="card" style="width: 18rem;">
-        <li>
-        <p>{{dataValues.name}}</p>
-        <p>{{dataValues.category}}</p>
-        <p>{{dataValues.instructions}}</p>
-      </li>
-  
-  <div class="row" class="card-body">
-    <button id="deleteBTN" data-id="{{this.id}}"><i class="fas fa-trash"></i></button> 
-    <button id="postBTN" data-id ="{{id}}" data-exercise="true"><i class="fas fa-heartbeat"></i></button>
-  </div>
-
+      <div class="row" class="card-body">
+        <div class="card" style="width: 18rem;">
+          <div>
+            <li> 
+                <p>{{dataValues.category}}</p>
+                <p>{{dataValues.name}}</p>
+                <i id="deleteBTN" data-id="{{this.id}}" class="fas fa-trash"></i>
+            </li>
+          </div>
+        
+          <!-- Default dropup button -->
+          <div class="btn-group dropup">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Focus On
+            </button>
+              <div class="dropdown-menu">
+                <!-- Dropdown menu links -->
+                <a class="dropup-item" href="#">Arms</a>
+                <a class="dropup-item" href="#">Back</a>
+                <a class="dropup-item" href="#">Chest</a>
+                <a class="dropup-item" href="#">Legs</a>
+                <a class="dropup-item" href="#">Cardio</a>
+                <a class="dropup-item" href="#">Abs</a>
+              </div>
+            <input name="exerciseName"type="name" class="form-control" id="inputName" placeholder="Your Exercise">
+            <i id="postBTN" data-id ="{{id}}" data-exercise="true" class="fas fa-heartbeat"></i>
+          </div>          
+        </div>
+      </div>
     </div>
-  </div>
-     {{/each}}
-  
-  </div>
-
-  
+      {{/each}}
+    </div>
 </div>

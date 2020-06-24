@@ -1,16 +1,23 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(() => {
-  $("#saveBTN").on("click", function() {
-    const id = $(this).data("id");
-    const exercise = $(this).data("exercise");
+    $(".create-form").on("submit", function(event) {
+        // Make sure to preventDefault on a submit event.
+        event.preventDefault();
+    
+        var newCat = {
+          name: $("#ca").val().trim(),
+          sleepy: $("[name=sleepy]:checked").val().trim()
+        };
+  $("#saveBTN").on("click", () => {
+    // const id = $(this).data("id");
+    // const exercise = $(this).data("exercise");
 
-    const Exercise = {
-        // COLUMN NAME HERE SLEEPYY
-      sleepy: exercise
-    };
-
+    // const Exercise = {
+    //     // COLUMN NAME HERE SLEEPYY
+    //   sleepy: exercise
+    // };
     // Send the POST request.
-    $.ajax("/api/cats", {
+    $.ajax("/api/exercises", {
       type: "POST",
       data: Exercise
     }).then(() => {
@@ -20,11 +27,11 @@ $(() => {
     });
   });
 
-  $("#deleteBTN").on("click", function(event) {
+  $("#deleteBTN").on("click", function() {
     const id = $(this).data("id");
 
     // Send the DELETE request.
-    $.ajax("/api/cats/" + id, {
+    $.ajax("/api/exercises" + id, {
       type: "DELETE"
     }).then(() => {
       console.log("deleted exercise", id);
