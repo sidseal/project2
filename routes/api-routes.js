@@ -15,25 +15,23 @@ module.exports = function(app) {
   });
 
   //Week Get route, gets weekdays but returns empty Exercise array
-  app.get("/api/week", (req, res) => {
+  app.get("/api/exercises", (req, res) => {
     // Here we add an "include" property to our options in our findAll query
     // We set the value to an array of the models we want to include in a left outer join
     // In this case, just db.Post
-    db.Week.findAll({
-      include: [db.Exercises]
-    }).then(dbWeek => {
-      res.json(dbWeek);
+    db.Exercises.findAll({}).then(dbExercise => {
+      res.json(dbExercise);
     });
   });
 
   //Through Table
 
-  app.get("/api/thrutable", (req, res) => {
-    // Here we add an "include" property to our options in our findAll query
-    // We set the value to an array of the models we want to include in a left outer join
-    // In this case, just db.Post
-    db.ThruTable.findAll({}).then(dbThruTable => {
-      res.json(dbThruTable);
-    });
-  });
+  // app.get("/api/thrutable", (req, res) => {
+  //   // Here we add an "include" property to our options in our findAll query
+  //   // We set the value to an array of the models we want to include in a left outer join
+  //   // In this case, just db.Post
+  //   db.ThruTable.findAll({}).then(dbThruTable => {
+  //     res.json(dbThruTable);
+  //   });
+  // });
 };
