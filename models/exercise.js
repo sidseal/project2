@@ -10,25 +10,16 @@ module.exports = function(sequelize, DataTypes) {
     },
     instructions: {
       type: DataTypes.STRING,
-      allowNull: false
-    },
-    createdAt: {
-      type: DataTypes.DATE,
-      // field: "created_at",
-      // type: sequelize.DATE,
-      allowNull: false
-    },
-    updatedAt: {
-      type: DataTypes.DATE,
-      // field: "updated_at",
-      // type: sequelize.DATE,
-      allowNull: false
+      allowNull: true
     }
   });
   // Association
-  Exercises.associate = function(models) {
-    Exercises.belongsTo(models.Week);
-  };
-
+  // Exercises.associate = function(models) {
+  //   Exercises.belongsTo(models.Week, {
+  //     foreignKey: {
+  //       allowNull: false
+  //     }
+  //   });
+  // };
   return Exercises;
 };

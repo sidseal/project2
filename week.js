@@ -1,19 +1,12 @@
 module.exports = function(sequelize, DataTypes) {
   const Week = sequelize.define("Week", {
     weekDay: {
-      type: DataTypes.STRING,
-      allowNull: false
+      type: DataTypes.STRING
     }
   });
-
   // Association
   Week.associate = function(models) {
-    Week.hasMany(models.Exercises, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
+    Week.hasMany(models.Exercises);
   };
-
   return Week;
 };
