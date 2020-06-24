@@ -6,18 +6,31 @@
 
 
   {{!-- 7 Day Workout Forecast --}}
-  <div class="row">
+  
+
+
+    <div>
      {{#each exercises}}
     <div>
-     
-      <li>
+
+      
+     <div class="card" style="width: 18rem;">
+        <li>
         <p>{{dataValues.name}}</p>
         <p>{{dataValues.category}}</p>
         <p>{{dataValues.instructions}}</p>
       </li>
-     
-    </div>
-     {{/each}}
+  
+  <div class="row" class="card-body">
+    <button id="deleteBTN" data-id="{{this.id}}"><i class="fas fa-trash"></i></button> 
+    <button id="postBTN" data-id ="{{id}}" data-exercise="true"><i class="fas fa-heartbeat"></i></button>
   </div>
-</div>
 
+    </div>
+  </div>
+     {{/each}}
+  
+  </div>
+
+  
+</div>

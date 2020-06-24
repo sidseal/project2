@@ -1,0 +1,41 @@
+body, html {
+    background-color: rgb(54, 143, 91);
+    color: rgb(243, 171, 36);
+}
+ h1 {
+    font-family: 'Notable', sans-serif;
+ }
+
+ h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+
+.card {
+    border-radius: 20%;
+    border-style: groove;
+}
+
+i {
+    cursor: pointer;
+}
+
+.carousel-item {
+    width: 70%;
+    margin: auto;
+    max-height: 750px;
+}
+
+li {
+    margin: 20%;
+}
+
+#deleteBTN {
+    margin-left: 30%;
+    color: red;
+}
+
+#postBTN {
+    margin-left: 30%;
+    color: green;
+}
+

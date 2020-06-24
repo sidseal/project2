@@ -26,4 +26,13 @@ module.exports = function(app) {
     });
   });
 
+  app.delete("/api/week/:id", (req, res) => {
+    db.Week.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(dbWeek => {
+      res.json(dbWeek);
+    });
+  });
 };
