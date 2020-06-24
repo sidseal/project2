@@ -24,6 +24,16 @@ module.exports = function(app) {
     });
   });
 
+  app.delete("/api/exercises/:id", (req, res) => {
+    db.Exercises.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(dbExercise => {
+      res.json(dbExercise);
+    });
+  });
+
   //Through Table
 
   // app.get("/api/thrutable", (req, res) => {
