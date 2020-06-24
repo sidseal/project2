@@ -1,15 +1,16 @@
 {{!-- Main Content --}}
 <div class="container-fluid" id="center-all-content">
     <div>
-     {{#each exercises}}
+     {{#each days}}
     <div>
-      <div class="row" class="card-body">
+      <div class="row" class="card-body" id={{days}}>
         <div class="card" style="width: 18rem;">
           <div>
             <li> 
-                <p>{{dataValues.category}}</p>
-                <p>{{dataValues.name}}</p>
-                <i id="deleteBTN" data-id="{{this.id}}" class="fas fa-trash"></i>
+                {{!-- <p>{{dataValues.category}}</p>
+                <p>{{dataValues.name}}</p> --}}
+                <p>Please Choose Your Exercise</p>
+                {{!-- <i data-id="{{this.id}}" class="fas fa-trash"></i> --}}
             </li>
           </div>
         
@@ -28,7 +29,7 @@
                 <a class="dropup-item" href="#">Abs</a>
               </div>
             <input name="exerciseName"type="name" class="form-control" id="inputName" placeholder="Your Exercise">
-            <i id="postBTN" data-id ="{{id}}" data-exercise="true" class="fas fa-heartbeat"></i>
+            <i data-id ="{{id}}" data-exercise="true" class="fas fa-heartbeat"></i>
           </div>          
         </div>
       </div>

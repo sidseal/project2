@@ -19,9 +19,13 @@ body, html {
     border-width: thick;
 }
 
+a.dropup-item {
+    display: block;
+}
+
 .row {
     margin: 5%;
-    float: left;
+    /* float: left; */
 }
 
 i {
@@ -40,12 +44,12 @@ li {
     margin: 10%;
 }
 
-#deleteBTN {
+.fa-trash {
     margin-left: 30%;
     color: red;
 }
 
-#postBTN {
+.fa-heartbeat {
     margin-left: 30%;
     color: green;
 }

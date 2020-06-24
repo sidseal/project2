@@ -1,14 +1,7 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(() => {
-    $(".create-form").on("submit", function(event) {
-        // Make sure to preventDefault on a submit event.
-        event.preventDefault();
-    
-        var newCat = {
-          name: $("#ca").val().trim(),
-          sleepy: $("[name=sleepy]:checked").val().trim()
-        };
-  $("#saveBTN").on("click", () => {
+  $(".fa-heartbeat").on("click", () => {
+    console.log("test", this);
     // const id = $(this).data("id");
     // const exercise = $(this).data("exercise");
 
@@ -27,7 +20,7 @@ $(() => {
     });
   });
 
-  $("#deleteBTN").on("click", function() {
+  $(".fa-trash").on("click", function() {
     const id = $(this).data("id");
 
     // Send the DELETE request.
