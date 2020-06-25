@@ -74,16 +74,11 @@ $(() => {
       }).then(data => {
         console.log("data", data);
       });
-    } else {
-      // get exercise selection from db
-      $.ajax({
-        url: "/api/exercises/" + category,
-        method: "GET"
-      }).then(data => {
-        console.log("data", data);
-      });
     }
   });
+
+
+
 
   displayStoredExercises();
 

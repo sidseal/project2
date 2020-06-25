@@ -1,4 +1,4 @@
-const Op = Sequelize.Op;
+// const Op = Sequelize.Op;
 const db = require("../models");
 module.exports = function(app) {
   // app.get("/", (req, res) => {
@@ -16,18 +16,21 @@ module.exports = function(app) {
   // });
 
   app.get("/", (req, res) => {
+    //render page
+    res.render("index", {
+      days: ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"]
+      // exercises: results
 
-    db.Exercises.findAll({}).then(results => {
+//     db.Exercises.findAll({}).then(results => {
       // results are available to us inside the .then
       // const obj = {
       //   exercises: results
       // };
       // console.log(obj);
       // res.render("index", obj);
-      res.render("index", {
-        days: ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"]
-
-      });
+//       res.render("index", {
+//         days: ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"]
+//       });
     });
   });
 };
