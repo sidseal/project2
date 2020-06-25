@@ -11,6 +11,10 @@ h2 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+h5{
+  text-align: center;
+}
+
 .card {
   display: initial;
   padding: 2%;

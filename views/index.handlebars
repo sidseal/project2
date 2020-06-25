@@ -40,6 +40,7 @@
 
         <div>
             {{!-- Cards --}}
+
             {{#each days}}
             <div>
                 <div class="row" class="card-body" id={{this}}>
@@ -47,17 +48,15 @@
                         <div>
 
                             {{!-- week day --}}
-                            <p> {{this}}</p>
+                            <h5> {{this}}</h5>
 
-                            {{!-- {{#each exercises}} --}}
-                            {{!-- <p> {{exercises}} /yellow</p> --}}
-                            {{!-- {{/each}} --}}
-                            <p>{{dataValues.category}}</p>
-                            <p>{{dataValues.name}}</p>
                             <p id="instruction">Please Choose Your Exercise</p>
                             <ul>
-                                {{!-- <p>{{dataValues.category}}</p>
-                <p>{{dataValues.name}}</p> --}}
+                                {{#each exercises as |item|}}
+                                <p>{{item.[0]}}</p>
+                                {{!-- <p>{{exercises.dataValues.name}}</p> --}}
+                                {{/each}}
+                                
                             </ul>
                         </div>
                         <select class="dropdown-menu">
