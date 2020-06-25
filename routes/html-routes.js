@@ -18,7 +18,7 @@ module.exports = function (app) {
   app.get("/", (req, res) => {
     //render page
     res.render("index", {
-      days: ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"]
+      days: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
 
       // exercises: results
