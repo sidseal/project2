@@ -1,4 +1,4 @@
-const Op = Sequelize.Op;
+// const Op = Sequelize.Op;
 const db = require("../models");
 module.exports = function(app) {
   // app.get("/", (req, res) => {
@@ -16,24 +16,23 @@ module.exports = function(app) {
   // });
 
   app.get("/", (req, res) => {
-    db.Exercises.findAll({
-      where: {
-        id: {
-          [Op.between]: [1, 7]
-        }
-      }
-    }).then(results => {
-      //object
-      // const obj = {
-      //   days: ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"],
-      //   exercises: results
-      // };
-     
-      //render page
-      res.render("index", {
-        days: ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"],
-        exercises: results
-      });
+    // db.Exercises.findAll({
+    //   where: {
+    //     id: {
+    //       [Op.between]: [1, 7]
+    //     }
+    //   }
+    // }).then(results => {
+    //object
+    // const obj = {
+    //   days: ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"],
+    //   exercises: results
+    // };
+
+    //render page
+    res.render("index", {
+      days: ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"]
+      // exercises: results
     });
   });
 };
