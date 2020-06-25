@@ -19,6 +19,8 @@ module.exports = function (app) {
     //render page
     res.render("index", {
       days: ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"]
+
+
       // exercises: results
 
       //     db.Exercises.findAll({}).then(results => {
