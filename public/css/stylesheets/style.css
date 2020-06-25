@@ -41,13 +41,6 @@ li {
     padding: 5px;
 }
 
-.fa-trash {
-    margin-left: 30%;
-    color: red;
-    font-size: 25px;
-    border: solid 1px red;
-}
-
 .form-control {
     width: 275px;
     margin-left: 20px;
