@@ -7,20 +7,13 @@
         <div class="card" id="cardMarg">
           <div>
             <p id="instruction">Please Choose Your Exercise</p>
+            
             <ul> 
                 {{!-- <p>{{dataValues.category}}</p>
                 <p>{{dataValues.name}}</p> --}}
-                
-                {{!-- <i data-id="{{this.id}}" class="fas fa-trash"></i> --}}
             </ul>
           </div>
-        
-          <!-- Default dropup button -->
-          {{!-- <div class="btn-group dropup"> --}}
-            {{!-- <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              With This Workout
-            </button> --}}
-            
+      
               <select class="dropdown-menu">
                 <!-- Dropdown menu links -->
                 <option value=" " disabled selected>Focus On</option>
@@ -30,13 +23,12 @@
                 <option value="legs">Legs</option>
                 <option value="cardio">Cardio</option>
                 <option value="abs">Abs</option>
-              {{!-- </div> --}}
+            </div>
             <input name="exerciseName"type="name" class="form-control" id="inputName" placeholder="Your Exercise">
             <i data-id ="{{id}}" data-exercise="true" class="fas fa-heartbeat"></i>
             <p class="message"></p>
           </div>          
         </div>
-      {{!-- </div> --}}
     </div>
       {{/each}}
     </div>

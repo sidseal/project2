@@ -69,25 +69,15 @@ $(() => {
         method: "GET"
       }).then(data => {
         console.log("data", data);
-
-        // display relevant exercises in second drop down (one option is to create a second drop down in the html that will be placed in the same area as the input box; then when the user chooses a category, you hide the input box and display the second drop down)
       });
     }
   });
 
-  // needs to clear item from local storage
-  $(".fa-trash").on("click", function() {
-    const id = $(this).data("id");
-
-    // Send the DELETE request.
-    $.ajax("/api/exercises" + id, {
-      type: "DELETE"
-    }).then(() => {
-      console.log("deleted exercise", id);
-      // Reload the page to get the updated list
-      location.reload();
-    });
-  });
-
   displayStoredExercises();
+
+  function getDate() {
+    $("#currentDay").text(moment().format("dddd"));
+  }
+  console.log("test");
+  getDate();
 });
