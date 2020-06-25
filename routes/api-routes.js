@@ -14,12 +14,13 @@ module.exports = function(app) {
       res.json(dbExercise);
     });
   });
-
+  //laura used
   app.post("/api/exercises", (req, res) => {
+    console.log(req.body);
     db.Exercises.create({
-      name: req.name,
-      category: req.category,
-      instructions: req.instructions
+      name: req.body.name,
+      category: req.body.category,
+      instructions: req.body.instructions
     }).then(dbExercise => {
       res.json(dbExercise);
     });
