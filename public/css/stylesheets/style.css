@@ -1,3 +1,4 @@
+/* Card Styling */
 body, html {
     background-color: rgb(54, 143, 91);
     color: rgb(243, 171, 36);
@@ -70,4 +71,18 @@ li {
     margin-top: 10px;
 }
 
+/* Nav bar styling */
+.navbar{
+    color: rgb(243, 171, 36);
+}
 
+/* Npm Scroll effect */
+
+    /* body height */
+    section{
+        height: 100vh;
+    }
+    .container-fluid{
+        width: 100%;
+        height: 100%;
+    }

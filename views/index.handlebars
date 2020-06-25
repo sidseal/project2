@@ -1,6 +1,28 @@
+{{!-- navbar --}}
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="navbar-brand">
+            <img src="https://img.icons8.com/ios-filled/50/000000/deadlift.png" width="30" height="30" class="d-inline-block align-top"
+                alt="Training Zone logo" />
+            Training Zone
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav " id="navbar-links-align">
+                <a class="nav-item nav-link active scroll-page" data-scroll href="#">Home <span
+                        class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link scroll-page" href="#work-out-sec">Work Outs</a>
+            
+            </div>
+        </div>
+    </nav>
+
 {{!-- Main Content --}}
 <div class="container-fluid" id="center-all-content">
-  <div>
+  <section id="work-out-sec">
+    <div >
     {{#each days}}
     <div>
       <div class="row" class="card-body" id={{this}}>
@@ -39,4 +61,5 @@
     </div>
     {{/each}}
   </div>
+  </section>
 </div>

@@ -1,4 +1,4 @@
-const Op = Sequelize.Op;
+// const Op = Sequelize.Op;
 const db = require("../models");
 module.exports = function(app) {
   // app.get("/", (req, res) => {

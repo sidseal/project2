@@ -1,7 +1,7 @@
 // Requiring necessary npm packages
 require("dotenv").config();
 const express = require("express");
-const date = require('date-and-time');
+// const date = require('date-and-time');
 
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 8080;
