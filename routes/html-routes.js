@@ -16,23 +16,17 @@ module.exports = function(app) {
   // });
 
   app.get("/", (req, res) => {
-    db.Exercises.findAll({
-      where: {
-        id: {
-          [Op.between]: [1, 7]
-        }
-      }
-    }).then(results => {
-      //object
+
+    db.Exercises.findAll({}).then(results => {
+      // results are available to us inside the .then
       // const obj = {
-      //   days: ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"],
       //   exercises: results
       // };
-     
-      //render page
+      // console.log(obj);
+      // res.render("index", obj);
       res.render("index", {
-        days: ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"],
-        exercises: results
+        days: ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"]
+
       });
     });
   });
