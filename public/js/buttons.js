@@ -77,9 +77,6 @@ $(() => {
     }
   });
 
-
-
-
   displayStoredExercises();
 
   function getDate() {

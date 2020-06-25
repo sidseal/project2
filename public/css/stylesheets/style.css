@@ -71,8 +71,14 @@ li {
   margin-top: 10px;
 }
 
+/* Title center */
+#work-out-sec h3 {
+text-align: center;
+}
+
+/* Nav bar */
 .navbar {
-  color: rgb(243, 171, 36);
+  background-color: rgb(243, 171, 36);
 }
 /* body height */
 section {

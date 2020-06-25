@@ -1,58 +1,78 @@
 {{!-- navbar --}}
 <nav class="navbar navbar-expand-lg navbar-light ">
-  <div class="navbar-brand">
-    <img src="https://img.icons8.com/ios-filled/50/000000/deadlift.png" width="30" height="30"
-      class="d-inline-block align-top" alt="Training Zone logo" />
-    Training Zone
-  </div>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-    <div class="navbar-nav " id="navbar-links-align">
-      <a class="nav-item nav-link active scroll-page" data-scroll href="#">Home <span
-          class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link scroll-page" href="#work-out-sec">Work Outs</a>
+    <div class="navbar-brand">
+        <img src="https://img.icons8.com/ios-filled/50/000000/deadlift.png" width="40" height="50"
+            class="d-inline-block align-top" alt="Training Zone logo" />
+        Training Zone
     </div>
-  </div>
-</nav>
-{{!-- Main Content --}}
-<div class="container-fluid" id="center-all-content">
-  <section id="work-out-sec">
-    <div >
-    {{#each days}}
-    <div>
-      <div class="row" class="card-body" id={{this}}>
-        <div class="card" id="cardMarg">
-          <div>
-            {{!-- {{#each exercises}} --}}
-            {{!-- <p> {{exercises}} /yellow</p> --}}
-            {{!-- {{/each}} --}}
-            <p>{{dataValues.category}}</p>
-                <p>{{dataValues.name}}</p>
-            <p id="instruction">Please Choose Your Exercise</p>
-            <ul>
-                {{!-- <p>{{dataValues.category}}</p>
-                <p>{{dataValues.name}}</p> --}}
-            </ul>
-          </div>
-              <select class="dropdown-menu">
-                <!-- Dropdown menu links -->
-                <option value=" " disabled selected>Focus On</option>
-                <option value="arms">Arms</option>
-                <option value="back">Back</option>
-                <option value="chest" >Chest</option>
-                <option value="legs">Legs</option>
-                <option value="cardio">Cardio</option>
-                <option value="abs">Abs</option>
-            </div>
-            <input name="exerciseName"type="name" class="form-control" id="inputName" placeholder="Your Exercise">
-            <i data-id ="{{id}}" data-exercise="true" class="fas fa-heartbeat"></i>
-            <p class="message"></p>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+        <div class="navbar-nav " id="navbar-links-align">
+            <a class="nav-item nav-link active scroll-page" data-scroll href="#">Home <span
+                    class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link scroll-page" href="#work-out-sec">Workouts</a>
         </div>
     </div>
-    {{/each}}
-  </div>
-  </section>
+</nav>
+
+{{!-- Main Content --}}
+<div class="container-fluid" id="center-all-content">
+    {{!-- Home, Jumbotron --}}
+    <section class="row ">
+        <div class="jumbotron  center-align" id="welcome-sign">
+
+            <h4>Welcome to Training Zone!</h4>
+            <p class="lead">
+                To begin keeping track of your fitness progress, select a workout from the drop-down menu below and
+                enter your personal workout information.
+            </p>
+        </div>
+    </section>
+
+    {{!-- Workouts Section --}}
+    <section id="work-out-sec">
+        {{!-- Workouts Title --}}
+        <h3>Weekly Workouts</h3>
+
+
+        <div>
+            {{!-- Cards --}}
+            {{#each days}}
+            <div>
+                <div class="row" class="card-body" id={{this}}>
+                    <div class="card" id="cardMarg">
+                        <div>
+                            {{!-- {{#each exercises}} --}}
+                            {{!-- <p> {{exercises}} /yellow</p> --}}
+                            {{!-- {{/each}} --}}
+                            <p>{{dataValues.category}}</p>
+                            <p>{{dataValues.name}}</p>
+                            <p id="instruction">Please Choose Your Exercise</p>
+                            <ul>
+                                {{!-- <p>{{dataValues.category}}</p>
+                <p>{{dataValues.name}}</p> --}}
+                            </ul>
+                        </div>
+                        <select class="dropdown-menu">
+                            <!-- Dropdown menu links -->
+                            <option value=" " disabled selected>Focus On</option>
+                            <option value="arms">Arms</option>
+                            <option value="back">Back</option>
+                            <option value="chest">Chest</option>
+                            <option value="legs">Legs</option>
+                            <option value="cardio">Cardio</option>
+                            <option value="abs">Abs</option>
+                    </div>
+                    <input name="exerciseName" type="name" class="form-control" id="inputName"
+                        placeholder="Your Exercise">
+                    <i data-id="{{id}}" data-exercise="true" class="fas fa-heartbeat"></i>
+                    <p class="message"></p>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </section>
 </div>
