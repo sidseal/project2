@@ -1,12 +1,18 @@
 {{!-- Main Content --}}
 <div class="container-fluid" id="center-all-content">
-    <div>
-     {{#each days}}
+  <div>
+    {{#each days}}
     <div>
       <div class="row" class="card-body" id={{this}}>
         <div class="card" id="cardMarg">
           <div>
+            {{!-- {{#each exercises}} --}}
+            {{!-- <p> {{exercises}} /yellow</p> --}}
+            {{!-- {{/each}} --}}
+            <p>{{dataValues.category}}</p>
+                <p>{{dataValues.name}}</p>
             <p id="instruction">Please Choose Your Exercise</p>
+
             
             <ul> 
                 {{!-- <p>{{dataValues.category}}</p>
@@ -26,10 +32,11 @@
             </div>
             <input name="exerciseName"type="name" class="form-control" id="inputName" placeholder="Your Exercise">
             <i data-id ="{{id}}" data-exercise="true" class="fas fa-heartbeat"></i>
+
             <p class="message"></p>
-          </div>          
         </div>
+
     </div>
-      {{/each}}
-    </div>
+    {{/each}}
+  </div>
 </div>

@@ -62,6 +62,18 @@ $(() => {
 
       // store category and input to localStorage
       localStorage.setItem("userExercises", JSON.stringify(userExercises));
+      // laura edited
+      console.log(input);
+      console.log(category);
+      $.post({
+        url: "/api/exercises",
+        data: {
+          name: input,
+          category: category
+        }
+      }).then(data => {
+        console.log("data", data);
+      });
     } else {
       // get exercise selection from db
       $.ajax({
